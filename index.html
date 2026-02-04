@@ -133,7 +133,7 @@
     <div class="dashboard">
         <!-- HEADER -->
         <header class="header">
-            <div class="logo-text">MOLUSCO<span class="logo-red">TV</span> NETWORK</div>
+            <div class="logo-text">MOLUSCO<span class="logo-red">TV</span></div>
             <div class="live-status">
                 <div class="live-dot"></div>
                 <div style="font-weight: 800; font-size: 0.9rem;">STUDIO LIVE: <span id="live-count">12,405</span></div>
@@ -302,13 +302,15 @@
             // Comments Sync
             async function updateComments() {
                 try {
-                    const chatRes = await fetch('https://molusco-live-dash.vercel.app/real_live_chat.json');
+                    // Added timestamp to bypass cache
+                    const chatRes = await fetch('https://molusco-live-dash.vercel.app/real_live_chat.json?t=' + Date.now());
                     const chatData = await chatRes.json();
                     const feed = document.getElementById('comments');
                     
                     if (chatData.messages && chatData.messages.length > 0) {
                         feed.innerHTML = '';
-                        chatData.messages.slice(0, 8).forEach(c => {
+                        // Show most recent first
+                        chatData.messages.slice(0, 10).forEach(c => {
                             const div = document.createElement('div');
                             div.className = 'comment';
                             div.innerHTML = `<span class="u">${c.user}:</span> ${c.text}`;
@@ -319,7 +321,7 @@
             }
 
             updateComments();
-            setInterval(updateComments, 10000); // Check for new messages every 10s
+            setInterval(updateComments, 5000); // Super fast refresh (5s) for the studio
         }
 
         init();
