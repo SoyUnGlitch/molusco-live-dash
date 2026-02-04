@@ -233,9 +233,18 @@
                 `).join('');
                 document.getElementById('video-list').innerHTML = videoHtml;
                 
-                // Update Hero
-                document.getElementById('curr-thumb').src = data.videos[0].thumbnail;
-                document.getElementById('velocity-num').innerText = parseInt(data.videos[0].views).toLocaleString();
+                // Update Header Live Count
+                const liveResponse = await fetch('https://molusco-live-dash.vercel.app/current_live_stats.json');
+                const liveData = await liveResponse.json();
+                
+                if (liveData.activeLive) {
+                    document.getElementById('live-count').innerText = parseInt(liveData.concurrentViewers).toLocaleString();
+                    document.getElementById('velocity-num').innerText = parseInt(liveData.concurrentViewers).toLocaleString();
+                    document.querySelector('.velocity-lbl').innerText = "Real-Time Live Viewers";
+                    document.getElementById('curr-thumb').src = liveData.thumbnail;
+                } else {
+                    document.getElementById('live-count').innerText = "0";
+                }
 
             } catch (e) {
                 console.log('Using fallback/simulated data for live updates');
