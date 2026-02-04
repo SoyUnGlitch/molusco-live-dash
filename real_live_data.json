@@ -1,0 +1,84 @@
+{
+  "timestamp": "2026-02-04T23:26:36.746Z",
+  "channel": {
+    "kind": "youtube#channel",
+    "etag": "7njSltRkKx2F3IcatzXniC-c73g",
+    "id": "UCBfg3Yc_8iIJ0e0MeMKg2Bw",
+    "snippet": {
+      "title": "MoluscoTV",
+      "description": "MoluscoTV = a variedad en contenido. Bienvenidos. ",
+      "customUrl": "@moluscotv",
+      "publishedAt": "2011-04-16T03:23:32Z",
+      "thumbnails": {
+        "default": {
+          "url": "https://yt3.ggpht.com/JqbdvoDwKUCvR-U4kHK5eI_X3RSAmGRAgjDaiW6jCSy6DT6ZdrScmWw1pH9MBoL0TRUIPRC9=s88-c-k-c0x00ffffff-no-rj",
+          "width": 88,
+          "height": 88
+        },
+        "medium": {
+          "url": "https://yt3.ggpht.com/JqbdvoDwKUCvR-U4kHK5eI_X3RSAmGRAgjDaiW6jCSy6DT6ZdrScmWw1pH9MBoL0TRUIPRC9=s240-c-k-c0x00ffffff-no-rj",
+          "width": 240,
+          "height": 240
+        },
+        "high": {
+          "url": "https://yt3.ggpht.com/JqbdvoDwKUCvR-U4kHK5eI_X3RSAmGRAgjDaiW6jCSy6DT6ZdrScmWw1pH9MBoL0TRUIPRC9=s800-c-k-c0x00ffffff-no-rj",
+          "width": 800,
+          "height": 800
+        }
+      },
+      "localized": {
+        "title": "MoluscoTV",
+        "description": "MoluscoTV = a variedad en contenido. Bienvenidos. "
+      },
+      "country": "PR"
+    },
+    "statistics": {
+      "viewCount": "603798252",
+      "subscriberCount": "2780000",
+      "hiddenSubscriberCount": false,
+      "videoCount": "3842"
+    }
+  },
+  "videos": [
+    {
+      "title": "\"VA A SALIR LIBRE\": Caso del Biologo ases!nad0 analizado por los Lcdos Jose lozada y Pablo Lugo",
+      "id": "S7IRiJf2nqQ",
+      "views": "12015",
+      "likes": "659",
+      "comments": "108",
+      "thumbnail": "https://i.ytimg.com/vi/S7IRiJf2nqQ/mqdefault.jpg"
+    },
+    {
+      "title": "Gallo en Problemas luego de descarga a Michael Flores y su equipo/ Black Guayaba En VIVO",
+      "id": "iQJEto8ibZw",
+      "views": "6081",
+      "likes": "306",
+      "comments": "0",
+      "thumbnail": "https://i.ytimg.com/vi/iQJEto8ibZw/mqdefault_live.jpg"
+    },
+    {
+      "title": "Gallo manda 🔥 a Michael Flores/ Alofoke se la da a Molu/ Laura Cruz, se%ologa, interroga a las nenas",
+      "id": "e6CQqOXq_XM",
+      "views": "96633",
+      "likes": "3902",
+      "comments": "254",
+      "thumbnail": "https://i.ytimg.com/vi/e6CQqOXq_XM/mqdefault.jpg"
+    },
+    {
+      "title": "cuando te dicen PREGUNTA SIN FILTRO #moluscotv #Molusco #Shorts",
+      "id": "Vm-0LEQ-E-8",
+      "views": "5469",
+      "likes": "180",
+      "comments": "13",
+      "thumbnail": "https://i.ytimg.com/vi/Vm-0LEQ-E-8/mqdefault.jpg"
+    },
+    {
+      "title": "DE DONDE SALEN LOS $5K? Alejandro Garcia Padilla y Francisco Pares Debaten: Reforma Laboral",
+      "id": "9LVdB3KyX_U",
+      "views": "43539",
+      "likes": "2625",
+      "comments": "250",
+      "thumbnail": "https://i.ytimg.com/vi/9LVdB3KyX_U/mqdefault.jpg"
+    }
+  ]
+}
