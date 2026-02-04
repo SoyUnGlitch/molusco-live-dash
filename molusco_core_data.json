@@ -1,0 +1,225 @@
+{
+  "channel": {
+    "kind": "youtube#channel",
+    "etag": "Ej27hiIoIxlIKRqTkYfAqSa7LQs",
+    "id": "UCBfg3Yc_8iIJ0e0MeMKg2Bw",
+    "snippet": {
+      "title": "MoluscoTV",
+      "description": "MoluscoTV = a variedad en contenido. Bienvenidos. ",
+      "customUrl": "@moluscotv",
+      "publishedAt": "2011-04-16T03:23:32Z",
+      "thumbnails": {
+        "default": {
+          "url": "https://yt3.ggpht.com/JqbdvoDwKUCvR-U4kHK5eI_X3RSAmGRAgjDaiW6jCSy6DT6ZdrScmWw1pH9MBoL0TRUIPRC9=s88-c-k-c0x00ffffff-no-rj",
+          "width": 88,
+          "height": 88
+        },
+        "medium": {
+          "url": "https://yt3.ggpht.com/JqbdvoDwKUCvR-U4kHK5eI_X3RSAmGRAgjDaiW6jCSy6DT6ZdrScmWw1pH9MBoL0TRUIPRC9=s240-c-k-c0x00ffffff-no-rj",
+          "width": 240,
+          "height": 240
+        },
+        "high": {
+          "url": "https://yt3.ggpht.com/JqbdvoDwKUCvR-U4kHK5eI_X3RSAmGRAgjDaiW6jCSy6DT6ZdrScmWw1pH9MBoL0TRUIPRC9=s800-c-k-c0x00ffffff-no-rj",
+          "width": 800,
+          "height": 800
+        }
+      },
+      "localized": {
+        "title": "MoluscoTV",
+        "description": "MoluscoTV = a variedad en contenido. Bienvenidos. "
+      },
+      "country": "PR"
+    },
+    "statistics": {
+      "viewCount": "603798252",
+      "subscriberCount": "2780000",
+      "hiddenSubscriberCount": false,
+      "videoCount": "3842"
+    },
+    "brandingSettings": {
+      "channel": {
+        "title": "MoluscoTV",
+        "description": "MoluscoTV = a variedad en contenido. Bienvenidos. ",
+        "keywords": "\"molusco tv\" \"el molusco\" \"molusco puerto rico\" moluskein yosoyelmolusco \"molusco comedia\" yosoymolusco anuel elrefugio \"Andrew alvarez\" \"podcast molusco\" \"la tendencia de molusco\" \"el refugio\" \"musica urbana\" \"podcast molusco\" \"bad bunny\" \"podcast puerto rico\" influencer celebrity \"Puerto rico\" latinoamerica latino radio personality artista actor locutor badbunny boricua urbano musica farandula",
+        "unsubscribedTrailer": "S7IRiJf2nqQ",
+        "country": "PR"
+      },
+      "image": {
+        "bannerExternalUrl": "https://yt3.googleusercontent.com/CBvZmeBhdlgGL8YC6WRN5wQKOhQOoAiUvc2hZf0p0hy1RH17dRwQG_fr-Cc-m_7Swi85K6Gd"
+      }
+    }
+  },
+  "latestVideos": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "mUJ2xtAJ27aNj8Ei9MJVNs4RtnM",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "S7IRiJf2nqQ"
+      },
+      "snippet": {
+        "publishedAt": "2026-02-04T19:56:26Z",
+        "channelId": "UCBfg3Yc_8iIJ0e0MeMKg2Bw",
+        "title": "&quot;VA A SALIR LIBRE&quot;: Caso del Biologo ases!nad0 analizado por los Lcdos Jose lozada y Pablo Lugo",
+        "description": "Para MAS CONTENIDO ORIGINAL VISITA MoluscoTV 2 https://www.youtube.com/@moluscotv2.0 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/S7IRiJf2nqQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/S7IRiJf2nqQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/S7IRiJf2nqQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "MoluscoTV",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-02-04T19:56:26Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Xbmpj65kXvJEIsp5xHsUFi5ytng",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "iQJEto8ibZw"
+      },
+      "snippet": {
+        "publishedAt": "2026-02-04T16:37:46Z",
+        "channelId": "UCBfg3Yc_8iIJ0e0MeMKg2Bw",
+        "title": "Gallo en Problemas luego de descarga a Michael Flores y su equipo/ Black Guayaba En VIVO",
+        "description": "Para MAS CONTENIDO ORIGINAL VISITA MoluscoTV 2 https://www.youtube.com/@MoluscoTV2.0 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/iQJEto8ibZw/default_live.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/iQJEto8ibZw/mqdefault_live.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/iQJEto8ibZw/hqdefault_live.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "MoluscoTV",
+        "liveBroadcastContent": "upcoming",
+        "publishTime": "2026-02-04T16:37:46Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "iFGDwpMIkj3yqEMazw76pgYR384",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "e6CQqOXq_XM"
+      },
+      "snippet": {
+        "publishedAt": "2026-02-04T01:10:56Z",
+        "channelId": "UCBfg3Yc_8iIJ0e0MeMKg2Bw",
+        "title": "Gallo manda 🔥 a Michael Flores/ Alofoke se la da a Molu/ Laura Cruz, se%ologa, interroga a las nenas",
+        "description": "Para MAS CONTENIDO ORIGINAL VISITA MoluscoTV 2 https://www.youtube.com/@MoluscoTV2.0 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/e6CQqOXq_XM/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/e6CQqOXq_XM/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/e6CQqOXq_XM/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "MoluscoTV",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-02-04T01:10:56Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "hYKCQogA_u_KbrfInmJnQmv9bAc",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Vm-0LEQ-E-8"
+      },
+      "snippet": {
+        "publishedAt": "2026-02-04T00:01:10Z",
+        "channelId": "UCBfg3Yc_8iIJ0e0MeMKg2Bw",
+        "title": "cuando te dicen PREGUNTA SIN FILTRO #moluscotv #Molusco #Shorts",
+        "description": "Para MAS CONTENIDO ORIGINAL VISITA MoluscoTV 2 https://www.youtube.com/@moluscotv2.0 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Vm-0LEQ-E-8/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Vm-0LEQ-E-8/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Vm-0LEQ-E-8/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "MoluscoTV",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-02-04T00:01:10Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "x9s2cvHoNWOWsN1nihoTxJiKdM4",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "9LVdB3KyX_U"
+      },
+      "snippet": {
+        "publishedAt": "2026-02-03T17:35:41Z",
+        "channelId": "UCBfg3Yc_8iIJ0e0MeMKg2Bw",
+        "title": "DE DONDE SALEN LOS $5K? Alejandro Garcia Padilla y Francisco Pares Debaten: Reforma Laboral",
+        "description": "Para MAS CONTENIDO ORIGINAL VISITA MoluscoTV 2 https://www.youtube.com/@MoluscoTV2.0 ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/9LVdB3KyX_U/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/9LVdB3KyX_U/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/9LVdB3KyX_U/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "MoluscoTV",
+        "liveBroadcastContent": "none",
+        "publishTime": "2026-02-03T17:35:41Z"
+      }
+    }
+  ]
+}

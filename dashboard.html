@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoluscoTV Network - Command Center</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --molusco-red: #e31e24;
+            --bg-dark: #050505;
+            --card-bg: #0f0f0f;
+            --text-main: #ffffff;
+            --text-dim: #888888;
+            --accent: #ff2b32;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            overflow: hidden; /* Clean studio look */
+            height: 100vh;
+        }
+
+        .dashboard {
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            height: 100vh;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        /* HEADER */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #1a1a1a;
+            padding-bottom: 20px;
+        }
+
+        .logo-group {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-text {
+            font-weight: 900;
+            font-size: 2rem;
+            letter-spacing: -1px;
+            text-transform: uppercase;
+        }
+
+        .logo-red {
+            color: var(--molusco-red);
+        }
+
+        .status-badge {
+            background: rgba(227, 30, 36, 0.1);
+            color: var(--molusco-red);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 1px solid var(--molusco-red);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+
+        /* MAIN CONTENT */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr 1fr;
+            gap: 20px;
+        }
+
+        .col {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            padding: 24px;
+            border: 1px solid #1a1a1a;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 2px;
+            background: linear-gradient(90deg, transparent, var(--molusco-red), transparent);
+            opacity: 0.5;
+        }
+
+        .card-title {
+            font-size: 0.85rem;
+            color: var(--text-dim);
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* CENTER COUNTER */
+        .center-col {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .counter-label {
+            font-size: 1.2rem;
+            color: var(--text-dim);
+            font-weight: 700;
+            margin-bottom: -10px;
+        }
+
+        .counter-value {
+            font-size: 10rem;
+            font-weight: 900;
+            letter-spacing: -6px;
+            color: var(--text-main);
+            line-height: 1;
+        }
+
+        .counter-subs {
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            color: var(--molusco-red);
+            font-weight: 900;
+        }
+
+        /* PERFORMANCE GRID */
+        .perf-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .stat-item .val {
+            font-size: 2.2rem;
+            font-weight: 900;
+            display: block;
+        }
+
+        .stat-item .lbl {
+            font-size: 0.75rem;
+            color: var(--text-dim);
+            text-transform: uppercase;
+        }
+
+        /* TRENDING LIST */
+        .video-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .video-card {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            background: #151515;
+            padding: 10px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .video-card:hover {
+            transform: translateX(5px);
+            background: #1a1a1a;
+        }
+
+        .video-thumb {
+            width: 80px;
+            aspect-ratio: 16/9;
+            background: #222;
+            border-radius: 4px;
+            object-fit: cover;
+        }
+
+        .video-meta {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .video-name {
+            font-size: 0.85rem;
+            font-weight: 700;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .video-views {
+            font-size: 0.75rem;
+            color: var(--molusco-red);
+            font-weight: 700;
+        }
+
+        /* FOOTER TICKER */
+        .footer-ticker {
+            height: 40px;
+            background: var(--molusco-red);
+            margin: -20px -20px 0 -20px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .ticker-content {
+            display: flex;
+            white-space: nowrap;
+            animation: ticker 30s linear infinite;
+        }
+
+        .ticker-item {
+            color: white;
+            font-weight: 900;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            padding: 0 40px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        @keyframes ticker {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <!-- HEADER -->
+        <header class="header">
+            <div class="logo-group">
+                <div class="logo-text">MOLUSCO<span class="logo-red">TV</span></div>
+                <div class="status-badge">LIVE FEED</div>
+            </div>
+            <div id="current-time" style="font-weight: 700; color: var(--text-dim);">00:00:00</div>
+        </header>
+
+        <!-- MAIN -->
+        <div class="main-grid">
+            <div class="col">
+                <div class="card">
+                    <div class="card-title"><i class="fas fa-chart-line"></i> Canal Statistics</div>
+                    <div class="perf-grid">
+                        <div class="stat-item">
+                            <span class="lbl">Total Views</span>
+                            <span class="val">603.7M</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="lbl">Videos</span>
+                            <span class="val">3,842</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="lbl">Avg Daily</span>
+                            <span class="val">+850K</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="lbl">New Subs (24h)</span>
+                            <span class="val" style="color: #4ade80;">+2.5K</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" style="flex: 1;">
+                    <div class="card-title"><i class="fas fa-fire"></i> Trending Now</div>
+                    <div class="video-list" id="video-list">
+                        <!-- Fetched via script -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="center-col">
+                <div class="counter-label">MOLUSCO TV CORE</div>
+                <div class="counter-value" id="subs-count">2,780,000</div>
+                <div class="counter-subs">Subscribers</div>
+                
+                <div style="margin-top: 40px; width: 300px; height: 4px; background: #222; border-radius: 2px;">
+                    <div style="width: 78%; height: 100%; background: var(--molusco-red); border-radius: 2px; box-shadow: 0 0 15px var(--molusco-red);"></div>
+                </div>
+                <div style="margin-top: 10px; font-size: 0.8rem; font-weight: 700; color: var(--text-dim);">GOAL: 3M SUBS</div>
+            </div>
+
+            <div class="col">
+                <div class="card" style="flex: 1; border-color: rgba(227, 30, 36, 0.3);">
+                    <div class="card-title" style="color: var(--molusco-red);"><i class="fas fa-broadcast-tower"></i> On-Air Content</div>
+                    <div id="hero-content">
+                        <!-- Latest video -->
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-title"><i class="fas fa-map-marker-alt"></i> Studio Audience</div>
+                    <div class="perf-grid">
+                        <div class="stat-item">
+                            <span class="lbl">Live Now</span>
+                            <span class="val" style="color: var(--molusco-red);">12,402</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="lbl">Peak (24h)</span>
+                            <span class="val">42.8K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TICKER -->
+        <div class="footer-ticker">
+            <div class="ticker-content" id="ticker">
+                <!-- Repeated for loop -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const videoData = [
+            { id: 'S7IRiJf2nqQ', title: 'VA A SALIR LIBRE: Caso Biólogo', views: '12K views / hour' },
+            { id: 'iQJEto8ibZw', title: 'Gallo en Problemas: Black Guayaba', views: '45K views / hour' },
+            { id: 'e6CQqOXq_XM', title: 'Gallo manda fuego a Michael Flores', views: '8.2K views / hour' },
+            { id: '9LVdB3KyX_U', title: 'Alejandro Garcia Padilla: Reforma', views: '15.4K views / hour' }
+        ];
+
+        function init() {
+            // Render videos
+            const list = document.getElementById('video-list');
+            list.innerHTML = videoData.slice(0, 4).map(v => `
+                <div class="video-card">
+                    <img src="https://i.ytimg.com/vi/${v.id}/mqdefault.jpg" class="video-thumb">
+                    <div class="video-meta">
+                        <div class="video-name">${v.title}</div>
+                        <div class="video-views">${v.views}</div>
+                    </div>
+                </div>
+            `).join('');
+
+            // Render Hero
+            const hero = document.getElementById('hero-content');
+            hero.innerHTML = `
+                <img src="https://i.ytimg.com/vi/${videoData[0].id}/maxresdefault.jpg" style="width: 100%; border-radius: 8px; margin-bottom: 15px;">
+                <h2 style="font-size: 1.1rem; margin-bottom: 10px;">${videoData[0].title}</h2>
+                <div style="display: flex; gap: 15px;">
+                    <span style="font-size: 0.8rem; font-weight: 700; color: var(--molusco-red);"><i class="fas fa-eye"></i> LIVE PERFORMANCE: +25%</span>
+                </div>
+            `;
+
+            // Render Ticker
+            const ticker = document.getElementById('ticker');
+            const items = ['BREAKING: CASO BIÓLOGO ASESINADO ANALIZADO EN VIVO', 'MOLUSCOTV SUBS: 2.78M', 'NEW VIDEO TRENDING: Gallo vs Michael Flores', 'SUBSCRIBE NOW TO MOLUSCOTV 2.0'];
+            const content = items.map(t => `<div class="ticker-item"><i class="fas fa-bolt"></i> ${t}</div>`).join('');
+            ticker.innerHTML = content + content; // Duplicate for smooth loop
+
+            // Clock
+            setInterval(() => {
+                document.getElementById('current-time').innerText = new Date().toLocaleTimeString();
+            }, 1000);
+        }
+
+        // Live counter animation simulation
+        let currentSubs = 2780000;
+        setInterval(() => {
+            currentSubs += Math.floor(Math.random() * 2);
+            document.getElementById('subs-count').innerText = currentSubs.toLocaleString();
+        }, 3000);
+
+        init();
+    </script>
+</body>
+</html>
